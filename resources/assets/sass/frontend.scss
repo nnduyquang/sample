@@ -1,0 +1,35 @@
+#owl-slide{
+  position: relative;
+  .item img{
+    display: block;
+    width: 100%;
+    height: 450px;
+  }
+  .owl-nav{
+    .owl-prev, .owl-next{
+      position: absolute;
+      top: 50%;
+      background-color: rgba(0, 0, 0, .2);
+      color: #fff;
+      font-size: 30px;
+      display: inline-block;
+      margin-top: -35px;
+      height: 70px;
+      width: 70px;
+      line-height: 70px;
+      text-align: center;
+      border-radius: 100px;
+      z-index: 5;
+      -webkit-transition: background-color .4s;
+      transition: background-color .4s;
+    }
+    .owl-prev{
+      left: -35px;
+      text-indent: 14px;
+    }
+    .owl-next{
+      right:-35px;
+      text-indent: -14px;
+    }
+  }
+}
