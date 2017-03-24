@@ -13,10 +13,8 @@
     @yield('styles')
 </head>
 <body>
-<header>
-    <div>
-        {{--@include('frontend.header.menu')--}}
-    </div>
+<header id="header">
+        @include('menu.epomi')
 </header>
 <div id="main-banner">
     @yield('slider')
