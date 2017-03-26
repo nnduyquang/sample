@@ -41,6 +41,7 @@ table {
 #main-banner {
   overflow: hidden;
   padding: 0;
+  width:100%;
 }
 
 #slider {
@@ -76,7 +77,9 @@ table {
 
 //arrows on first carousel
 #slider.owl-theme {
+  margin-top: 53px;////////////////Cái Thằng Này Là Do Menu1 nó đang ở chế độ relative nên 2 thằng đè nhau, nhịn 1 tý
   position: relative;
+  z-index: -1;
   .owl-next, .owl-prev {
     margin-top: -20px;
     position: absolute;

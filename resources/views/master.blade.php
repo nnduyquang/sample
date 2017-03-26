@@ -9,18 +9,20 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     {{ Html::style('css/app.css') }}
-    {{--{{ Html::style('css/banner/banner.css') }}--}}
+    {{ Html::style('css/menu1.css') }}
     @yield('styles')
 </head>
 <body>
 <header id="header">
-        @include('menu.epomi')
+
 </header>
 <div id="main-banner">
+    @include('menu.menu1')
     @yield('slider')
 </div>
-<div class="">
-    {{--@yield('container')--}}
+<div class="container">
+
+    @yield('container')
 </div>
 <div class="footer">
     {{--@include('frontend.footer.footer')--}}

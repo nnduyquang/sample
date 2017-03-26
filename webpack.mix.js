@@ -16,12 +16,17 @@ const {mix} = require('laravel-mix');
 mix.styles([
     'bower_components/jquery/dist/jquery.min.js',
     'bower_components/bootstrap/dist/js/bootstrap.min.js',
+    'node_modules/jquery.mmenu/dist/js/jquery.mmenu.min.js'
 ], 'public/js/core.js')
     .styles([
         'bower_components/bootstrap/dist/css/bootstrap.min.css',
-        'bower_components/font-awesome/css/font-awesome.min.css'
+        'bower_components/font-awesome/css/font-awesome.min.css',
+        // menu1
+        'node_modules/jquery.mmenu/dist/css/jquery.mmenu.all.css'
+        //end menu1
     ], 'public/css/app.css')
     .sass('resources/assets/sass/frontend.scss','public/css')
+    .sass('resources/assets/sass/menu1.scss','public/css')
     .styles([
         'resources/assets/js/scripts.js'
     ], 'public/js/scripts.js')
