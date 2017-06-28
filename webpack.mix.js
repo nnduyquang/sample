@@ -14,32 +14,22 @@ const {mix} = require('laravel-mix');
 // mix.js('resources/assets/js/app.js', 'public/js')
 //    .sass('resources/assets/sass/app.scss', 'public/css');
 mix.styles([
+    //Chỉ Chứa Những Thư Viện JS Dùng Chung Cho Cả Frontend Và Backend
     'bower_components/jquery/dist/jquery.min.js',
     'bower_components/bootstrap/dist/js/bootstrap.min.js',
-    'node_modules/jquery.mmenu/dist/js/jquery.mmenu.min.js'
-], 'public/js/core.js')
+], 'public/js/core.common.js')
     .styles([
+        //Chỉ Chứa Những Thư Viện CSS Dùng Chung Cho Cả Frontend Và Backend
         'bower_components/bootstrap/dist/css/bootstrap.min.css',
         'bower_components/font-awesome/css/font-awesome.min.css',
-        // menu1
-        'node_modules/jquery.mmenu/dist/css/jquery.mmenu.all.css'
-        //end menu1
-    ], 'public/css/app.css')
+    ], 'public/css/core.common.css')
+    //CSS Frontend
     .sass('resources/assets/sass/frontend.scss','public/css')
-    .sass('resources/assets/sass/menu1.scss','public/css')
-    .styles([
-        'resources/assets/js/scripts.js'
-    ], 'public/js/scripts.js')
+    // .styles([
+    //     'resources/assets/js/frontend.js'
+    // ], 'public/js/frontend.js')
     .copy([
         'bower_components/bootstrap/fonts/**',
         'bower_components/font-awesome/fonts/**'
     ], 'public/fonts')
-    .copy([
-        //Nivo Slider JS
-        'bower_components/owl.carousel/dist/owl.carousel.min.js'
-    ], 'public/js')
-    .copy([
-        //Nivo Slider CSS
-        'bower_components/owl.carousel/dist/assets/owl.carousel.min.css'
-    ], 'public/css')
 

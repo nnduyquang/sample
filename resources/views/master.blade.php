@@ -8,28 +8,28 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    {{ Html::style('css/app.css') }}
-    {{ Html::style('css/menu1.css') }}
+    {{ Html::style('css/core.common.css') }}
+    {{--{{ Html::style('css/core.frontend.css') }}--}}
+    {{--{{ Html::style('css/core.backend.css') }}--}}
+    {{ Html::style('css/frontend.css') }}
     @yield('styles')
 </head>
 <body>
 <header id="header">
 
 </header>
-<div id="main-banner">
-    @include('menu.menu1')
-    @yield('slider')
-</div>
-<div class="container">
 
+<div class="container">
     @yield('container')
 </div>
 <div class="footer">
     {{--@include('frontend.footer.footer')--}}
 </div>
-{{ Html::script('js/core.js') }}
+{{ Html::script('js/core.common.js') }}
+{{--{{ Html::script('js/core.frontend.js') }}--}}
+{{ Html::script('js/frontend.js') }}
 @yield('scripts')
-{{ Html::script('js/scripts.js') }}
+
 </body>
 
 </Html>
