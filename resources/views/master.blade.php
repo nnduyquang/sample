@@ -7,7 +7,7 @@
     <title>Smartlinks</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no">
     {{ Html::style('css/core.common.css') }}
     {{--{{ Html::style('css/core.frontend.css') }}--}}
     {{--{{ Html::style('css/core.backend.css') }}--}}
@@ -18,16 +18,45 @@
 <header id="header">
 
 </header>
-
-<div class="container">
-    @yield('container')
+<div id="blurrMe">
+    <div class="container">
+        <div style="background-color: #1ba8ff" class="mobile header fixed-header navbar-fixed-top" role="navigation">
+            <ul class="nav nav-pills pull-left">
+                <li><a href="#" id="trigger"><i class="fa fa-bars" aria-hidden="true"></i></a></li>
+                <li style="padding: 10px 15px">SMARTLINKS.VN</li>
+            </ul>
+            <div class="col-md-12 col-xs-12">
+                <form id="searchForm" main-title="" search-input=""><input
+                            placeholder="Tìm sản phẩm, danh mục hay thương hiệu..." autocomplete="off" name="q"
+                            type="search" class="form-control" id="searchInput" is="iron-input"></form>
+            </div>
+        </div>
+    </div>
+    <div id="wrap-container">
+        @yield('container')
+    </div>
 </div>
+<div class="sidebar closed">
+    <header>
+        <div class="background-sidebar"><h2><a href="#" id="close"> <i class="fa fa-arrow-left" aria-hidden="true"></i></a></h2></div>
+    </header>
+    <ul>
+        <li><a href="#">A link</a></li>
+        <li><a href="#">A link</a></li>
+        <li><a href="#">A link</a></li>
+        <li><a href="#">A link</a></li>
+        <li><a href="#">A link</a></li>
+        <li><a href="#">A link</a></li>
+        <li><a href="#">A link</a></li>
+    </ul>
+</div>
+
 <div class="footer">
     {{--@include('frontend.footer.footer')--}}
 </div>
 {{ Html::script('js/core.common.js') }}
 {{--{{ Html::script('js/core.frontend.js') }}--}}
-{{ Html::script('js/frontend.js') }}
+{{ Html::script('js/scripts.js') }}
 @yield('scripts')
 
 </body>

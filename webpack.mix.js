@@ -23,6 +23,7 @@ mix.styles([
         'bower_components/bootstrap/dist/css/bootstrap.min.css',
         'bower_components/font-awesome/css/font-awesome.min.css',
     ], 'public/css/core.common.css')
+    .styles('resources/assets/js/scripts.js','public/js/scripts.js')
     //CSS Frontend
     .sass('resources/assets/sass/frontend.scss','public/css')
     // .styles([
