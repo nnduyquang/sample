@@ -9,6 +9,14 @@ $(document).ready(function () {
             plugins.menu.toggleClass('closed');
             $('#blurrMe').toggleClass('blurred')
         })
+        $('#wrap-container').on('click', function () {
+            if ($('#blurrMe').hasClass('blurred')) {
+
+                $('#blurrMe').toggleClass('blurred')
+                plugins.menu.toggleClass('closed');
+            }
+        })
     }
+
     sidebar();
 });

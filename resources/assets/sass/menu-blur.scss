@@ -18,11 +18,11 @@
   top: 0;
   height: 100%;
   width: 260px;
-  background: #f3f3f3;
+  background: white;
   -webkit-transition: left 0.3s ease, -webkit-box-shadow 0.3s ease 0.2s;
   transition: left 0.3s ease, box-shadow 0.3s ease 0.2s;
-  -webkit-box-shadow: 0.5em 0 0 0 #1abc9c, 0.6em 0 0 0 #17a689;
-  box-shadow: 0.5em 0 0 0 #1abc9c, 0.6em 0 0 0 #17a689;
+  -webkit-box-shadow: 0.5em 0 0 0 #1ba8ff, 0.6em 0 0 0 #1ba8ff;
+  box-shadow: 0.5em 0 0 0 #1ba8ff, 0.6em 0 0 0 #1ba8ff;
 }
 .sidebar #close {
   //float: right;
@@ -34,8 +34,8 @@
 
 .sidebar.closed {
   left: -260px;
-  -webkit-box-shadow: 0 0 0 #1abc9c;
-  box-shadow: 0 0 0 #1abc9c;
+  -webkit-box-shadow: 0 0 0 #1ba8ff;
+  box-shadow: 0 0 0 #1ba8ff;
 }
 .sidebar h2 {
   padding: .5em;
@@ -43,46 +43,68 @@
 }
 .sidebar ul {
   padding: 0;
+  padding-top: 50px;
+  padding-bottom: 30px;
   margin: 0;
 }
 .sidebar ul li {
   width: 90%;
   margin: 5px 10px;
-  float: left;
   display: inline-block;
   margin-bottom: 0;
-  font-weight: 400;
-  text-align: center;
+  font-weight: bolder;
+  text-align: left;
   vertical-align: middle;
   cursor: pointer;
   background-image: none;
   border: 1px solid transparent;
   white-space: nowrap;
   padding: 3px 6px;
-  font-size: 14px;
-  line-height: 1.42857143;
+  font-size: 16px;
+  line-height: 1.8;
   border-radius: 4px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  border: 2px solid #1abc9c;
-  background: #1abc9c;
   color: #f3f3f3;
 }
+.sidebar .sidebar-sub-heading{
+  border-top: 1px solid #e0e0e0;
+  color: #757575;
+  display: block;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: bolder;
+}
+.sidebar .sidebar-hotline{
+  font-size: 16px;
+  font-weight: bolder;
+  padding: 16px;
+  color: #757575;
+}
+.sidebar .sidebar-hotline .sidebar-number{
+  color: #1ba8ff;
+}
+.sidebar .icon-sidebar{
+  width: 56px;
+}
 .sidebar ul li a {
-  color: white;
+  color: #757575;
+  text-decoration: none;
 }
 .sidebar ul li:hover {
-  background: #17a689;
-  border-color: #17a689;
+  //background: #17a689;
+  //border-color: #17a689;
+
 }
-.background-sidebar{
+.sidebar .background-sidebar{
   background-image: url(https://tiki.vn/images/authentication.svg);
   height: calc(56px*3);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
+  background-color: #1ba8ff;
 }
 #wrap-container{
   margin-top: 80px;
