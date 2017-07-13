@@ -2,59 +2,62 @@
 @section('styles')
 
 @stop
+@section('title')
+    SMARTLINKS
+@stop
 @section('scripts')
 @stop
 @section('slider')
 @stop
 @section("container")
-jjjjj<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
-abc<br>
+    jjjjj<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
+    abc<br>
 
 @stop
 
