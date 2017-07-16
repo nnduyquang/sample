@@ -1,0 +1,186 @@
+.menu-header {
+  padding: 28px 0 25px;
+  line-height: 14px;
+  background-color: #232628;
+  .menu-logo {
+    float: left;
+  }
+  .menu-header-info {
+    .menu-header-info-phone {
+      position: relative;
+      padding-left: 41px;
+      margin-left: 30px;
+      .icon-phone {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #cc6119;
+        font-size: 33px;
+      }
+      .info-phone {
+        margin-top: 1px;
+        .phone-label {
+          margin-right: 2px;
+          color: #cc6119;
+          font-size: 11px;
+          font-weight: 700;
+          text-transform: uppercase;
+          display: block;
+          margin-bottom: 1px;
+        }
+        .phone-heading-font {
+          color: #fff;
+          font-size: 18px;
+          line-height: 18px;
+          font-weight: 700;
+          letter-spacing: .5px;
+          a {
+            color: #fff !important;
+            text-decoration: none !important;
+          }
+        }
+      }
+    }
+    .menu-header-info-address {
+      position: relative;
+      padding-left: 42px;
+      max-width: 248px;
+      .icon-address {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 34px;
+        color: #cc6119;
+      }
+      .address-heading-font {
+        color: #fff;
+        font-size: 12px;
+        line-height: 18px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.menu-main {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: rgba(234, 237, 240, .8);
+  box-shadow: 0 0 4px rgba(0, 0, 0, .4);
+  height: 52px;
+  .header-menu {
+    padding: 0;
+    margin: 0;
+    margin-left: -21px;
+    list-style: none;
+  }
+
+  ul {
+    list-style: none;
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0
+  }
+
+  ul a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 52px;
+    padding: 0 21px;
+    text-transform: uppercase;
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif
+  }
+
+  ul li {
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0;
+  }
+  ul li.has-item-down{
+    >a:after{
+      position: absolute;
+      display: block;
+      font-family: FontAwesome;
+      text-rendering: auto;
+      transform: translate(0,0);
+      top: 0;
+      right: 7px;
+      font-size: 12px;
+      content: "\f107";
+    }
+  }
+  ul li.has-item-right{
+    >a:after{
+      position: absolute;
+      display: block;
+      font-family: FontAwesome;
+      text-rendering: auto;
+      transform: translate(0,0);
+      top: 0;
+      right: 7px;
+      font-size: 12px;
+      content: "\f105";
+    }
+  }
+
+
+  ul li.current-menu-item {
+    background: #ddd;
+    background-color: #cc6119;
+    a {
+      color: white;
+    }
+  }
+
+  ul li:hover {
+    background: #cc6119;
+
+  }
+  ul li:hover {
+    a {
+      color: white;
+    }
+
+  }
+
+  ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    padding: 0;
+
+  }
+
+  ul ul li {
+    float: none;
+    width: 200px;
+    a {
+      color: black!important;
+    }
+    a:hover{
+      color: white!important;
+    }
+  }
+
+  ul ul a {
+    line-height: 52px;
+  }
+
+  ul ul ul {
+    top: 0;
+    left: 100%
+  }
+
+  ul li:hover > ul {
+    display: block
+  }
+
+}
