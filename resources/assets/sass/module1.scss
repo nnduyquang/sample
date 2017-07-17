@@ -1,0 +1,50 @@
+.module1{
+  width: 100%;
+  background-image: url(http://motors.stylemixthemes.com/wp-content/uploads/2015/09/first-parallax-block.jpg?id=909) !important;;
+  position: static;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 50% 0;
+  overflow: hidden;
+  margin-bottom: 0px !important;
+  padding-top: 137px !important;
+  padding-bottom: 113px !important;
+  a{
+    text-decoration: none;
+  }
+  .module1-box{
+
+    position: relative;
+    padding: 46px 50px 48px 34px;
+    color: #232628;
+    z-index: 10;
+    &.left{
+      background-color: rgba(250, 182, 55, 0.9);
+    }
+    &.right{
+      background-color: rgba(255, 72, 72, 0.9);
+    }
+    .icon-left{
+      float: left;
+      margin-top: 11px;
+      margin-right: 27px;
+      color: #cc6119;
+      font-size: 54px;
+      color: #232628;
+    }
+    .icon-text{
+      overflow: hidden;
+      .module1-title{
+        color: #232628;
+        margin-bottom: 12px;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 28px;
+      }
+      .module1-content{
+        line-height: 17px;
+        font-size: 13px;
+      }
+    }
+  }
+}

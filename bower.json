@@ -17,6 +17,7 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "font-awesome": "^4.7.0",
-    "jquery.menu-aim": "*"
+    "jquery.menu-aim": "*",
+    "owl.carousel": "^2.2.1"
   }
 }

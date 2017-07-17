@@ -18,19 +18,32 @@ mix.styles([
     'bower_components/jquery/dist/jquery.min.js',
     'bower_components/bootstrap/dist/js/bootstrap.min.js',
 ], 'public/js/core.common.js')
+    //Chỉ Chứa Những Thư Viện CSS Dùng Chung Cho Cả Frontend Và Backend
     .styles([
-        //Chỉ Chứa Những Thư Viện CSS Dùng Chung Cho Cả Frontend Và Backend
         'bower_components/bootstrap/dist/css/bootstrap.min.css',
         'bower_components/font-awesome/css/font-awesome.min.css',
     ], 'public/css/core.common.css')
+    //CSS CORE FRONTEND
+    .styles([
+        'bower_components/nivo-slider/nivo-slider.css',
+        'bower_components/owl.carousel/dist/assets/owl.carousel.min.css',
+        'bower_components/owl.carousel/dist/assets/owl.theme.default.min.css'
+
+    ],'public/css/core.frontend.css')
+    //Chứa Javascript Điều Khiển Frontend
     .styles('resources/assets/js/scripts.js','public/js/scripts.js')
-    //CSS Frontend
+    //Chứa CSS Frontend
     .sass('resources/assets/sass/frontend.scss','public/css')
-    // .styles([
-    //     'resources/assets/js/frontend.js'
-    // ], 'public/js/frontend.js')
+    //JAVASCRIPT CORE FRONTEND
+    .styles([
+        'bower_components/nivo-slider/jquery.nivo.slider.pack.js',
+        'bower_components/owl.carousel/dist/owl.carousel.min.js',
+    ], 'public/js/core.frontend.js')
     .copy([
         'bower_components/bootstrap/fonts/**',
         'bower_components/font-awesome/fonts/**'
     ], 'public/fonts')
+    .copy([
+        'bower_components/nivo-slider/themes',
+    ],'public/css/themes',false)
 

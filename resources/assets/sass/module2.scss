@@ -1,0 +1,88 @@
+.module2 {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 30.5px;
+  padding-right: 30.5px;
+  margin-bottom: 0px !important;
+  padding-top: 51px !important;
+  padding-bottom: 40px !important;
+  background-image: url(http://motors.stylemixthemes.com/wp-content/uploads/2015/09/special_bg.png?id=261) !important;
+  background-position: 0 0 !important;
+  background-repeat: repeat !important;
+  .module2-title {
+    position: relative;
+    padding: 0 130px;
+    margin-bottom: 16px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: normal;
+    color: #fff;
+    .module2-show-all {
+      display: block;
+      position: absolute;
+      top: 14px;
+      right: 0;
+      font-size: 13px;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: #aaa;
+      text-decoration: none !important;
+      .span-top, .span-blue {
+        vertical-align: top;
+      }
+      .span-blue {
+        color: #6c98e1;
+      }
+    }
+  }
+  .module2-separator {
+    margin-bottom: 13px;
+    text-align: center;
+    vertical-align: top;
+    font-size: 0;
+    .first-separator {
+      display: inline-block;
+      vertical-align: top;
+      width: 33px;
+      height: 5px;
+      transform: skew(-40deg, 0deg);
+      border-radius: 2px;
+      background-color: #cc6119;
+      margin-right: 3px;
+    }
+    .last-separator {
+      display: inline-block;
+      vertical-align: top;
+      width: 16px;
+      height: 5px;
+      transform: skew(-40deg, 0deg);
+      border-radius: 2px;
+      background-color: #cc6119;
+    }
+  }
+  .module2-listing {
+    img{
+      padding: 0 10px 0 10px;
+    }
+    .stm-owl-prev, .stm-owl-next {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 30px;
+      padding: 5px 15px;
+      border: 2px solid transparent;
+      color: #888;
+    }
+    .owl-controls{
+      text-align: center;
+      margin-top: 35px;
+    }
+    .owl-dots {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 7px;
+      position: relative;
+      top: 1px;
+    }
+  }
+}

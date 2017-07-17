@@ -3,5 +3,7 @@
   "/css/frontend.css": "/css/frontend.css",
   "/js/core.common.js": "/js/core.common.js",
   "/css/core.common.css": "/css/core.common.css",
-  "/js/scripts.js": "/js/scripts.js"
+  "/css/core.frontend.css": "/css/core.frontend.css",
+  "/js/scripts.js": "/js/scripts.js",
+  "/js/core.frontend.js": "/js/core.frontend.js"
 }

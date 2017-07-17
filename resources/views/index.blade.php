@@ -1,6 +1,7 @@
 @extends('master')
 @section('styles')
-
+    {{--THEMES FOR NIVO SLIDER--}}
+    {{ Html::style('css/themes/default/default.css') }}
 @stop
 @section('title')
     SMARTLINKS
@@ -10,6 +11,8 @@
 @section('slider')
 @stop
 @section("container")
+    @include('module1')
+    @include('module2')
     jjjjj<br>
     abc<br>
     abc<br>
