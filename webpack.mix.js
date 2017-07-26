@@ -39,6 +39,14 @@ mix.styles([
         'bower_components/nivo-slider/jquery.nivo.slider.pack.js',
         'bower_components/owl.carousel/dist/owl.carousel.min.js',
     ], 'public/js/core.frontend.js')
+    //LOGIN 1 JS
+    .styles([
+        'resources/assets/js/login1.js',
+    ], 'public/js/login.js')
+    //LOGIN 1 CSS
+    .styles([
+        'resources/assets/sass/login1.scss',
+    ], 'public/css/login.css')
     .copy([
         'bower_components/bootstrap/fonts/**',
         'bower_components/font-awesome/fonts/**'

@@ -5,5 +5,7 @@
   "/css/core.common.css": "/css/core.common.css",
   "/css/core.frontend.css": "/css/core.frontend.css",
   "/js/scripts.js": "/js/scripts.js",
-  "/js/core.frontend.js": "/js/core.frontend.js"
+  "/js/core.frontend.js": "/js/core.frontend.js",
+  "/js/login.js": "/js/login.js",
+  "/css/login.css": "/css/login.css"
 }

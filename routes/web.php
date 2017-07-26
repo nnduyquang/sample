@@ -17,3 +17,6 @@ Route::get('/', function () {
 Route::get('/category', function () {
     return view('m-category');
 });
+Route::get('/sm_login', function () {
+    return view('backend.login.login1');
+});
