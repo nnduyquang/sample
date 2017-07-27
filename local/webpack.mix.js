@@ -23,6 +23,7 @@ mix.styles([
         'bower_components/bootstrap/dist/css/bootstrap.min.css',
         'bower_components/font-awesome/css/font-awesome.min.css',
     ], '../css/core.common.css')
+
     //CSS CORE FRONTEND
     .styles([
         'bower_components/nivo-slider/nivo-slider.css',
@@ -30,20 +31,36 @@ mix.styles([
         'bower_components/owl.carousel/dist/assets/owl.theme.default.min.css'
 
     ],'../css/core.frontend.css')
-    //Chứa Javascript Điều Khiển Frontend
-    .styles('resources/assets/js/scripts.js','../js/scripts.js')
-    //Chứa CSS Frontend
+
+    //CSS CORE BACKEND
+    .styles([
+        'bower_components/AdminLTE/dist/css/AdminLTE.min.css',
+        'bower_components/AdminLTE/dist/css/skins/skin-blue.min.css'
+    ],'../css/core.backend.css')
+
+    //CSS FRONTEND
     .sass('resources/assets/sass/frontend.scss','../../css/frontend.css')
+
+    //JAVASCRIPT CONTROL FRONTEND
+    .styles('resources/assets/js/scripts.js','../js/scripts.js')
+
     //JAVASCRIPT CORE FRONTEND
     .styles([
         'bower_components/nivo-slider/jquery.nivo.slider.pack.js',
         'bower_components/owl.carousel/dist/owl.carousel.min.js',
     ], '../js/core.frontend.js')
+
+    //JAVASCRIPT CORE BACKEND
+    .styles([
+        'bower_components/AdminLTE/dist/js/app.min.js',
+    ], '../js/core.backend.js')
+
     //LOGIN 1 JS
     .styles([
         'resources/assets/js/ulti.js',
         'resources/assets/js/login1.js',
     ], '../js/login.js')
+
     //LOGIN 1 CSS
     .styles([
         'resources/assets/sass/login1.scss',

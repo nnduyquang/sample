@@ -18,6 +18,8 @@
     "bootstrap": "^3.3.7",
     "font-awesome": "^4.7.0",
     "jquery.menu-aim": "*",
-    "owl.carousel": "^2.2.1"
+    "owl.carousel": "^2.2.1",
+    "AdminLTE": "adminlte#^2.3.11",
+    "nivo-slider": "*"
   }
 }

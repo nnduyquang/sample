@@ -10,7 +10,6 @@
 
     <link rel="stylesheet" href="css/login.css">
 
-
 </head>
 
 <body id="login">
@@ -31,7 +30,13 @@
 
 </div>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-
+<script type="text/javascript">
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+</script>
 <script src="js/login.js"></script>
 
 </body>

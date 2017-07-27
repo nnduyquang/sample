@@ -19,18 +19,9 @@ function getBaseURL() {
 }
 $(document).ready(function () {
     $('.log-btn').click(function () {
-        // $('.log-status').addClass('wrong-entry');
-        // $('.alert').fadeIn(500);
-        // setTimeout( "$('.alert').fadeOut(1500);",3000 );
         var data = new FormData($(this).get(0));
-        // data.append('_token', token);
         data.append('email', $('#email').val());
         data.append('password', $('#password').val());
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            }
-        });
         $.ajax({
             type: "POST",
             url: getBaseURL() + "sml_login",
@@ -40,7 +31,8 @@ $(document).ready(function () {
             data: data,
             success: function (data) {
                 if (data.success) {
-                    alert('success');
+                    // alert( getBaseURL() + "sml_admin/dashboard");
+                    window.location = getBaseURL() + "sml_admin/dashboard";
                 }
                 else {
                     alert('fail');
@@ -48,7 +40,6 @@ $(document).ready(function () {
                     $('.alert').fadeIn(500);
                     setTimeout("$('.alert').fadeOut(1500);", 3000);
                 }
-
             }
         });
     });
