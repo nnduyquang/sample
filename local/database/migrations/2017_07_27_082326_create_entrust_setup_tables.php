@@ -34,12 +34,22 @@ class CreateEntrustSetupTables  extends Migration
             $table->primary(['user_id', 'role_id']);
         });
 
+        Schema::create('category_permissions', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name')->unique();
+            $table->timestamps();
+        });
+
+
         // Create table for storing permissions
         Schema::create('permissions', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name')->unique();
             $table->string('display_name')->nullable();
             $table->string('description')->nullable();
+            $table->integer('category_permission_id')->unsigned();
+            $table->foreign('category_permission_id')->references('id')->on('category_permissions')
+                ->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
 

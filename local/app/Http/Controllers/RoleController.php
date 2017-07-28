@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\CategoryPermission;
 use Illuminate\Http\Request;
 use App\Role;
 use App\Permission;
@@ -16,8 +17,8 @@ class RoleController extends Controller
      */
     public function index(Request $request)
     {
-        $roles = Role::orderBy('id','DESC')->paginate(5);
-        return view('backend.admin.Role.role',compact('roles'))
+        $roles = Role::orderBy('id', 'DESC')->paginate(5);
+        return view('backend.admin.Role.role', compact('roles'))
             ->with('i', ($request->input('page', 1) - 1) * 5);
     }
 
@@ -29,13 +30,14 @@ class RoleController extends Controller
     public function create()
     {
         $permission = Permission::get();
-        return view('backend.admin.Role.create',compact('permission'));
+        $category_permissions = CategoryPermission::get();
+        return view('backend.admin.Role.create', compact('permission','category_permissions'));
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -58,45 +60,46 @@ class RoleController extends Controller
         }
 
         return redirect()->route('roles.index')
-            ->with('success','Role created successfully');
+            ->with('success', 'Role created successfully');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
         $role = Role::find($id);
-        $rolePermissions = Permission::join("permission_role","permission_role.permission_id","=","permissions.id")
-            ->where("permission_role.role_id",$id)
+        $rolePermissions = Permission::join("permission_role", "permission_role.permission_id", "=", "permissions.id")
+            ->where("permission_role.role_id", $id)
             ->get();
 
-        return view('backend.admin.Role.show',compact('role','rolePermissions'));
+        return view('backend.admin.Role.show', compact('role', 'rolePermissions'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
         $role = Role::find($id);
         $permission = Permission::get();
-        $rolePermissions = DB::table("permission_role")->where("permission_role.role_id",$id)
-            ->pluck('permission_role.permission_id','permission_role.permission_id');
-        return view('backend.admin.Role.edit',compact('role','permission','rolePermissions'));
+        $category_permissions = CategoryPermission::get();
+        $rolePermissions = DB::table("permission_role")->where("permission_role.role_id", $id)
+            ->pluck('permission_role.permission_id', 'permission_role.permission_id');
+        return view('backend.admin.Role.edit', compact('role', 'permission','category_permissions', 'rolePermissions'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -112,7 +115,7 @@ class RoleController extends Controller
         $role->description = $request->input('description');
         $role->save();
 
-        DB::table("permission_role")->where("permission_role.role_id",$id)
+        DB::table("permission_role")->where("permission_role.role_id", $id)
             ->delete();
 
         foreach ($request->input('permission') as $key => $value) {
@@ -120,19 +123,19 @@ class RoleController extends Controller
         }
 
         return redirect()->route('roles.index')
-            ->with('success','Role updated successfully');
+            ->with('success', 'Role updated successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        DB::table("roles")->where('id',$id)->delete();
+        DB::table("roles")->where('id', $id)->delete();
         return redirect()->route('roles.index')
-            ->with('success','Role deleted successfully');
+            ->with('success', 'Role deleted successfully');
     }
 }

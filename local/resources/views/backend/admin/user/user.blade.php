@@ -6,7 +6,9 @@
                 <h2>Users Management</h2>
             </div>
             <div class="pull-right">
+                @permission(('user-create'))
                 <a class="btn btn-success" href="{{ route('users.create') }}"> Create New User</a>
+                @endpermission
             </div>
         </div>
     </div>

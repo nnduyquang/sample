@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Create New Role</h2>
+                <h2>Khởi Tạo Quyền Mới</h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-primary" href="{{ route('roles.index') }}"> Back</a>
@@ -43,12 +43,31 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Permission:</strong>
-                <br/>
-                @foreach($permission as $value)
-                    <label>{{ Form::checkbox('permission[]', $value->id, false, array('class' => 'name')) }}
-                        {{ $value->display_name }}</label>
-                    <br/>
-                @endforeach
+                {{--<br/>--}}
+                {{--@foreach($permission as $value)--}}
+                    {{--<label>{{ Form::checkbox('permission[]', $value->id, false, array('class' => 'name')) }}--}}
+                        {{--{{ $value->display_name }}</label>--}}
+                    {{--<br/>--}}
+                {{--@endforeach--}}
+                <table class="table table-bordered">
+                    <tr>
+                        <th>Danh Sách Chức Năng</th>
+                        <th>Xem Danh Sách</th>
+                        <th>Tạo Mới</th>
+                        <th>Cập Nhật</th>
+                        <th>Xóa</th>
+                    </tr>
+                    @foreach ($category_permissions as $key => $category_permission)
+                        <tr>
+                            <td>{{$category_permission->name}}</td>
+                            @foreach ($permission as $key => $value)
+                                @if($category_permission->id==$value->category_permission_id)
+                                    <td>{{ Form::checkbox('permission[]', $value->id, false, array('class' => 'name')) }}</td>
+                                @endif
+                            @endforeach
+                        </tr>
+                    @endforeach
+                </table>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
