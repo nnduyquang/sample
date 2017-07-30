@@ -235,7 +235,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     @if(Auth::user()->can('role-list'))
                         <li><a href="{{ route('roles.index') }}"><i class="fa fa-link"></i> <span>Quyền</span></a></li>
                     @endif
-                    {{--<li><a href="{{ route('danhmucs.index') }}"><i class="fa fa-link"></i> <span>Danh Mục</span></a></li>--}}
+                    <li><a href="{{ route('news.index') }}"><i class="fa fa-link"></i> <span>Tin Tức</span></a></li>
                     {{--<li><a href="{{ route('sanphams.index') }}"><i class="fa fa-link"></i> <span>Sản Phẩm</span></a></li>--}}
                     {{--<li><a href="{{ route('sliders.index') }}"><i class="fa fa-link"></i> <span>Slider</span></a></li>--}}
                     {{--<li><a href="{{ route('trangs.index') }}"><i class="fa fa-link"></i> <span>Trang</span></a></li>--}}

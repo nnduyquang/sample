@@ -20,6 +20,7 @@
     "jquery.menu-aim": "*",
     "owl.carousel": "^2.2.1",
     "AdminLTE": "adminlte#^2.3.11",
-    "nivo-slider": "*"
+    "nivo-slider": "*",
+    "ckeditor": "^4.7.1"
   }
 }
