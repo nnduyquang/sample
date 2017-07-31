@@ -55,6 +55,11 @@ mix.styles([
         'bower_components/AdminLTE/dist/js/app.min.js',
     ], '../js/core.backend.js')
 
+    //JAVASCRIPTS CONTROL BACKEND
+    .styles([
+        'resources/assets/js/be.news.js'
+    ], '../js/backend.js')
+
     //LOGIN 1 JS
     .styles([
         'resources/assets/js/ulti.js',

@@ -68,25 +68,25 @@ class PermissionTableSeeder extends Seeder
                 'name' => 'news-list',
                 'display_name' => 'Xem Toàn Bộ Tin Tức',
                 'description' => 'Được Xem Toàn Bộ Tin Tức',
-                'category_permission_id'=>4
+                'category_permission_id'=>3
             ],
             [
                 'name' => 'news-create',
                 'display_name' => 'Tạo Tin Tức Mới',
                 'description' => 'Được Tin Tức Mới',
-                'category_permission_id'=>4
+                'category_permission_id'=>3
             ],
             [
                 'name' => 'news-edit',
                 'display_name' => 'Cập Nhật Tin Tức',
                 'description' => 'Được Cập Nhật Tin Tức',
-                'category_permission_id'=>4
+                'category_permission_id'=>3
             ],
             [
                 'name' => 'news-delete',
                 'display_name' => 'Xóa Tin Tức',
                 'description' => 'Được Xóa Tin Tức',
-                'category_permission_id'=>4
+                'category_permission_id'=>3
             ]
 
         ];

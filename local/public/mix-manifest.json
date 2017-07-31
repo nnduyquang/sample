@@ -8,6 +8,7 @@
   "../js/scripts.js": "../js/scripts.js",
   "../js/core.frontend.js": "../js/core.frontend.js",
   "../js/core.backend.js": "../js/core.backend.js",
+  "../js/backend.js": "../js/backend.js",
   "../js/login.js": "../js/login.js",
   "../css/login.css": "../css/login.css"
 }

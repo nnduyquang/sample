@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\News;
 use Illuminate\Http\Request;
 
 class NewsController extends Controller
@@ -13,8 +14,8 @@ class NewsController extends Controller
      */
     public function index(Request $request)
     {
-        $data = User::orderBy('id', 'DESC')->paginate(5);
-        return view('backend.admin.user.user', compact('data'))
+        $news = News::orderBy('id', 'DESC')->paginate(5);
+        return view('backend.admin.news.index', compact('news'))
             ->with('i', ($request->input('page', 1) - 1) * 5);
     }
 
@@ -25,7 +26,7 @@ class NewsController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.admin.news.create', compact('roles'));
     }
 
     /**
