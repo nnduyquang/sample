@@ -18,7 +18,7 @@ mix.styles([
     'bower_components/jquery/dist/jquery.min.js',
     'bower_components/bootstrap/dist/js/bootstrap.min.js',
 ], '../js/core.common.js')
-    //Chỉ Chứa Những Thư Viện CSS Dùng Chung Cho Cả Frontend Và Backend
+//Chỉ Chứa Những Thư Viện CSS Dùng Chung Cho Cả Frontend Và Backend
     .styles([
         'bower_components/bootstrap/dist/css/bootstrap.min.css',
         'bower_components/font-awesome/css/font-awesome.min.css',
@@ -30,19 +30,19 @@ mix.styles([
         'bower_components/owl.carousel/dist/assets/owl.carousel.min.css',
         'bower_components/owl.carousel/dist/assets/owl.theme.default.min.css'
 
-    ],'../css/core.frontend.css')
+    ], '../css/core.frontend.css')
 
     //CSS CORE BACKEND
     .styles([
         'bower_components/AdminLTE/dist/css/AdminLTE.min.css',
         'bower_components/AdminLTE/dist/css/skins/skin-blue.min.css'
-    ],'../css/core.backend.css')
+    ], '../css/core.backend.css')
 
     //CSS FRONTEND
-    .sass('resources/assets/sass/frontend.scss','../../css/frontend.css')
+    .sass('resources/assets/sass/frontend.scss', '../../css/frontend.css')
 
     //JAVASCRIPT CONTROL FRONTEND
-    .styles('resources/assets/js/scripts.js','../js/scripts.js')
+    .styles('resources/assets/js/scripts.js', '../js/scripts.js')
 
     //JAVASCRIPT CORE FRONTEND
     .styles([
@@ -76,5 +76,22 @@ mix.styles([
     ], '../fonts')
     .copy([
         'bower_components/nivo-slider/themes',
-    ],'../css/themes',false)
+    ], '../css/themes', false)
+
+    // CKEDITOR CHỈ CHẠY ĐOẠN NÀY 1 LẦN
+    // ===================
+    // .copy('bower_components/ckeditor/adapters', '../js/ckeditor/adapters',false)
+    // .copy('bower_components/ckeditor/lang', '../js/ckeditor/lang',false)
+    // .copy('bower_components/ckeditor/skins', '../js/ckeditor/skins',false)
+    // .copy([
+    //     'bower_components/ckeditor/ckeditor.js',
+    //     'bower_components/ckeditor/config.js',
+    //     'bower_components/ckeditor/contents.css',
+    //     'bower_components/ckeditor/styles.js'
+    // ], '../js/ckeditor',false)
+    // .copy('bower_components/ckeditor/plugins', '../js/ckeditor/plugins',false)
+
+
+    //FILE CẤU HÌNH CKEDITOR, NẾU CÓ THAY ĐỔI TRONG BOWER_CONPONENT THÌ CHẠY DÒNG NÀY
+    .copy('bower_components/ckeditor/config.js', '../js/ckeditor', false)
 

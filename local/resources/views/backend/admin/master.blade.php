@@ -376,6 +376,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
     });
 </script>
 {{ Html::script('js/core.backend.js') }}
-<script src="../../local/bower_components/ckeditor/ckeditor.js"></script>
+{{ Html::script('js/ckeditor/ckeditor.js') }}
 {{ Html::script('js/backend.js') }}
 </html>

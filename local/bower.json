@@ -21,7 +21,6 @@
     "owl.carousel": "^2.2.1",
     "AdminLTE": "adminlte#^2.3.11",
     "nivo-slider": "*",
-    "ckeditor": "^4.7.1",
-    "kcfinder": "^3.20.4"
+    "ckeditor": "#full/latest"
   }
 }
