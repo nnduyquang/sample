@@ -1,6 +1,7 @@
 {
   "/mix.js": "/mix.js",
   "/../../css/frontend.css": "/../../css/frontend.css",
+  "/../../css/backend.css": "/../../css/backend.css",
   "../js/core.common.js": "../js/core.common.js",
   "../css/core.common.css": "../css/core.common.css",
   "../css/core.frontend.css": "../css/core.frontend.css",

@@ -41,6 +41,9 @@ mix.styles([
     //CSS FRONTEND
     .sass('resources/assets/sass/frontend.scss', '../../css/frontend.css')
 
+    //CSS BACKEND
+    .sass('resources/assets/sass/backend.scss', '../../css/backend.css')
+
     //JAVASCRIPT CONTROL FRONTEND
     .styles('resources/assets/js/scripts.js', '../js/scripts.js')
 
@@ -78,20 +81,17 @@ mix.styles([
         'bower_components/nivo-slider/themes',
     ], '../css/themes', false)
 
-    // CKEDITOR CHỈ CHẠY ĐOẠN NÀY 1 LẦN
-    // ===================
-    // .copy('bower_components/ckeditor/adapters', '../js/ckeditor/adapters',false)
-    // .copy('bower_components/ckeditor/lang', '../js/ckeditor/lang',false)
-    // .copy('bower_components/ckeditor/skins', '../js/ckeditor/skins',false)
-    // .copy([
-    //     'bower_components/ckeditor/ckeditor.js',
-    //     'bower_components/ckeditor/config.js',
-    //     'bower_components/ckeditor/contents.css',
-    //     'bower_components/ckeditor/styles.js'
-    // ], '../js/ckeditor',false)
-    // .copy('bower_components/ckeditor/plugins', '../js/ckeditor/plugins',false)
+// CKEDITOR CHỈ CHẠY ĐOẠN NÀY 1 LẦN
+// ===================
+// .copy('bower_components/ckeditor/adapters', '../js/ckeditor/adapters',false)
+// .copy('bower_components/ckeditor/lang', '../js/ckeditor/lang',false)
+// .copy('bower_components/ckeditor/skins', '../js/ckeditor/skins',false)
+// .copy([
+//     'bower_components/ckeditor/ckeditor.js',
+//     'bower_components/ckeditor/config.js',
+//     'bower_components/ckeditor/contents.css',
+//     'bower_components/ckeditor/styles.js'
+// ], '../js/ckeditor',false)
+// .copy('bower_components/ckeditor/plugins', '../js/ckeditor/plugins',false)
 
-
-    //FILE CẤU HÌNH CKEDITOR, NẾU CÓ THAY ĐỔI TRONG BOWER_CONPONENT THÌ CHẠY DÒNG NÀY
-    .copy('bower_components/ckeditor/config.js', '../js/ckeditor', false)
 

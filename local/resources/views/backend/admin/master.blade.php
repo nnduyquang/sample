@@ -15,6 +15,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     {{ Html::style('css/core.common.css') }}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     {{ Html::style('css/core.backend.css') }}
+    {{ Html::style('css/backend.css') }}
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
@@ -377,5 +378,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 </script>
 {{ Html::script('js/core.backend.js') }}
 {{ Html::script('js/ckeditor/ckeditor.js') }}
+{{ Html::script('js/ckfinder/ckfinder.js') }}
 {{ Html::script('js/backend.js') }}
 </html>

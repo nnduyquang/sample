@@ -31,9 +31,25 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Nội Dung:</strong>
-                {!! Form::textarea('content',null, array('placeholder' => 'Nội Dung','id'=>'content','class' => 'form-control','rows'=>'5','style'=>'resize:none')) !!}
+                {!! Form::textarea('content',null, array('placeholder' => 'Nội Dung','id'=>'content','class' => 'form-control','rows'=>'20','style'=>'resize:none')) !!}
             </div>
         </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+
+            <div class="form-group">
+                <div class="form-inline">
+                    <span>Hình Đại Diện: </span>
+                    {!! Form::text('path', null, array('class' => 'form-control','id'=>'path')) !!}
+                    {!! Form::button('Browses', array('id' => 'btnBrowse','class'=>'btn btn-primary')) !!}
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                {{ Html::image('','',array('id'=>'showHinhDaiDien','class'=>'showHinh'))}}
+            </div>
+        </div>
+
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
             <button id="btnDanhMuc" type="submit" class="btn btn-primary">Tạo Mới Tin Tức</button>
         </div>
