@@ -39,7 +39,7 @@
             <div class="form-group">
                 <div class="form-inline">
                     <span>Hình Đại Diện: </span>
-                    {!! Form::text('path', null, array('class' => 'form-control','id'=>'path')) !!}
+                    {!! Form::text('image', null, array('class' => 'form-control','id'=>'path')) !!}
                     {!! Form::button('Browses', array('id' => 'btnBrowse','class'=>'btn btn-primary')) !!}
                 </div>
             </div>
