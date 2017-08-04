@@ -19,7 +19,8 @@
 </header>
 <div id="blurrMe">
     @include('m-menu')
-    @include('menu1')
+    {{--@include('menu1')--}}
+    @include('menu2')
     @include('slider1')
     <div id="wrap-container">
         @yield('container')
