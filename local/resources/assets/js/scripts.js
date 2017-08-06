@@ -1,7 +1,8 @@
 var plugins = {
     menu: $('.sidebar'),
     slider1: $('#slider1'),
-    module2:$('.module2-listing')
+    module2:$('.module2-listing'),
+    module5:$('.module5')
 };
 $(document).ready(function () {
     function sidebar() {
@@ -69,11 +70,41 @@ $(document).ready(function () {
             plugins.module2.trigger('next.owl.carousel');
         });
     }
+    function runModule5() {
+        plugins.module5.not('.slick-initialized').slick({
+            autoplay: true,
+            autoplaySpeed: 2000,
+            prevArrow: '.arrow-prev1',
+            nextArrow: '.arrow-next1',
+            mobileFirst: true,
+            responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                }
+            }, {
+
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            }, {
+                breakpoint: 480,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            }]
+        });
+    }
     sidebar();
     if (plugins.slider1.length) {
         runSlider1();
     }
     if(plugins.module2.length){
         runModule2();
+    }
+    if(plugins.module5.length){
+        runModule5();
     }
 });

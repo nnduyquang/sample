@@ -13,6 +13,9 @@
 @section("container")
     @include('module1')
     @include('module2')
+    @include('module3')
+    @include('module4')
+    @include('module5')
     jjjjj<br>
     abc<br>
     abc<br>
