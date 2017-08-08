@@ -32,7 +32,7 @@
                             </li>
                             <li class="has-item-down"><a href="/bridesmaids/" class="">Dịch Vụ</a>
                                 <ul>
-                                    <li><a href="#">Sub Menu 1</a></li>
+                                    <li><a href="{{URL::to('facebook')}}">Demo Facebook</a></li>
                                     <li><a href="#">Sub Menu 2</a></li>
                                     <li><a href="#">Sub Menu 3</a></li>
                                     <li class="has-item-right"><a href="#">Sub Menu 4</a>

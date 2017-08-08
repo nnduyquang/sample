@@ -14,6 +14,9 @@
 Route::get('/', function () {
     return view('index');
 });
+Route::get('/facebook', function () {
+    return view('facebook.index');
+});
 Route::get('/category', function () {
     return view('m-category');
 });
