@@ -21,6 +21,7 @@
     "owl.carousel": "^2.2.1",
     "AdminLTE": "adminlte#^2.3.11",
     "nivo-slider": "*",
-    "ckeditor": "#full/latest"
+    "ckeditor": "#full/latest",
+    "slick-carousel": "^1.7.1"
   }
 }

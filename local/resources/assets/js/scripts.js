@@ -1,7 +1,8 @@
 var plugins = {
     menu: $('.sidebar'),
     slider1: $('#slider1'),
-    module2: $('.module2-listing')
+    module2:$('.module2-listing'),
+    module5:$('.module5')
 };
 $(document).ready(function () {
     //Faceboook Init
@@ -12,7 +13,7 @@ $(document).ready(function () {
             xfbml: true,
             version: 'v2.8'
         });
-        // kiểm tra trạng thái hiện tại
+        // ki?m tra tr?ng th�i hi?n t?i
         FB.getLoginStatus(function (response) {
             statusChangeCallback(response);
         });
@@ -24,13 +25,13 @@ $(document).ready(function () {
     //Demo Facebook
     function statusChangeCallback(response) {
         if (response.status === 'connected') {
-            // Người dùng đã đăng nhập facebokk và đã đăng nhập vào ứng dụng
+            // Ngu?i d�ng d� dang nh?p facebokk v� d� dang nh?p v�o ?ng d?ng
             showWelcome();
         } else if (response.status === 'not_authorized') {
             showLoginButton();
         }
         else {
-            //người dùng chưa đăng nhập fb
+            //ngu?i d�ng chua dang nh?p fb
             showLoginButton();
         }
     }
@@ -43,12 +44,12 @@ $(document).ready(function () {
         js.src = "//connect.facebook.net/en_US/sdk.js";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
-    //yêu cầu đăng nhập facebook
+    //y�u c?u dang nh?p facebook
     function requestLoginFacebook() {
         window.location = 'http://graph.facebook.com/oauth/authorize?client_id=1401298499950254&scope=public_profile,email,user_likes,user_birthday,user_education_history,user_work_history,user_posts,user_friends,user_photos,user_location,publish_actions&redirect_uri=http://localhost:8080/sample&response_type=token';
     }
 
-    //Hiển thị nút đăng nhập
+    //Hi?n th? n�t dang nh?p
     function showLoginButton() {
         $('#btnLogin').css('display', 'block');
         $('#lbl').css('display', 'none');
@@ -65,7 +66,7 @@ $(document).ready(function () {
     $('#btnInfo').click(function () {
         showInfo()
     });
-    //Chào mừng người dùng đã đăng nhập
+    //Ch�o m?ng ngu?i d�ng d� dang nh?p
     function showWelcome() {
         $('#btnLogin').css('display', 'none');
         FB.api('/me', function (response) {
@@ -75,8 +76,8 @@ $(document).ready(function () {
             var username = response.username;
             var id = response.id;
             var access_token=response.access_token
-            $('#lbl').html('Tên = ' + name + ' Email = ' + email + ' id = ' + id + ' username = ' + username+' access_token= '+access_token);
-            //Trong trường hợp email trả ra undefined là do người dùng đã set email private
+            $('#lbl').html('T�n = ' + name + ' Email = ' + email + ' id = ' + id + ' username = ' + username+' access_token= '+access_token);
+            //Trong tru?ng h?p email tr? ra undefined l� do ngu?i d�ng d� set email private
             $('#lbl').css('display', 'block');
         });
     }
@@ -152,12 +153,41 @@ $(document).ready(function () {
             plugins.module2.trigger('next.owl.carousel');
         });
     }
+    function runModule5() {
+        plugins.module5.not('.slick-initialized').slick({
+            autoplay: true,
+            autoplaySpeed: 2000,
+            prevArrow: '.arrow-prev1',
+            nextArrow: '.arrow-next1',
+            mobileFirst: true,
+            responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                }
+            }, {
 
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            }, {
+                breakpoint: 480,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            }]
+        });
+    }
     sidebar();
     if (plugins.slider1.length) {
         runSlider1();
     }
     if (plugins.module2.length) {
         runModule2();
+    }
+    if(plugins.module5.length){
+        runModule5();
     }
 });

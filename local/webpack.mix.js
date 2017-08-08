@@ -28,7 +28,8 @@ mix.styles([
     .styles([
         'bower_components/nivo-slider/nivo-slider.css',
         'bower_components/owl.carousel/dist/assets/owl.carousel.min.css',
-        'bower_components/owl.carousel/dist/assets/owl.theme.default.min.css'
+        'bower_components/owl.carousel/dist/assets/owl.theme.default.min.css',
+        'bower_components/slick-carousel/slick/slick.css',
 
     ], '../css/core.frontend.css')
 
@@ -51,6 +52,7 @@ mix.styles([
     .styles([
         'bower_components/nivo-slider/jquery.nivo.slider.pack.js',
         'bower_components/owl.carousel/dist/owl.carousel.min.js',
+        'bower_components/slick-carousel/slick/slick.js',
     ], '../js/core.frontend.js')
 
     //JAVASCRIPT CORE BACKEND
