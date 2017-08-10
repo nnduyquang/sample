@@ -1,4 +1,4 @@
-<div class="module3">
+<div class="module3 col-md-12">
     <div class="container">
         <div class="empty-space"></div>
         <div class="heading-text">
@@ -78,7 +78,8 @@
                             <h5 class="entry-title">Báo Cáo</h5>
                         </header>
                         <div class="description-item">
-                            Khách hàng sẽ nhận được báo cáo trực tiếp từ Google để đánh giá hiệu quả mục tiêu kinh doanh
+                            Khách hàng sẽ nhận được báo cáo trực tiếp từ Google để đánh giá hiệu quả mục tiêu kinh
+                            doanh
                         </div>
                     </div>
                 </div>

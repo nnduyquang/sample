@@ -14,11 +14,12 @@ const {mix} = require('laravel-mix');
 // mix.js('resources/assets/js/app.js', 'public/js')
 //    .sass('resources/assets/sass/app.scss', 'public/css');
 mix.styles([
-    //Chỉ Chứa Những Thư Viện JS Dùng Chung Cho Cả Frontend Và Backend
+    //JS DÙNG CHUNG CHO FRONEND VÀ BACKEND
     'bower_components/jquery/dist/jquery.min.js',
     'bower_components/bootstrap/dist/js/bootstrap.min.js',
 ], '../js/core.common.js')
-//Chỉ Chứa Những Thư Viện CSS Dùng Chung Cho Cả Frontend Và Backend
+
+    //CSS DÙNG CHUNG CHO FRONTEND VÀ BACKEND
     .styles([
         'bower_components/bootstrap/dist/css/bootstrap.min.css',
         'bower_components/font-awesome/css/font-awesome.min.css',
@@ -45,22 +46,22 @@ mix.styles([
     //CSS BACKEND
     .sass('resources/assets/sass/backend.scss', '../../css/backend.css')
 
-    //JAVASCRIPT CONTROL FRONTEND
+    //JS CONTROL FRONTEND
     .styles('resources/assets/js/scripts.js', '../js/scripts.js')
 
-    //JAVASCRIPT CORE FRONTEND
+    //JS CORE FRONTEND
     .styles([
         'bower_components/nivo-slider/jquery.nivo.slider.pack.js',
         'bower_components/owl.carousel/dist/owl.carousel.min.js',
         'bower_components/slick-carousel/slick/slick.js',
     ], '../js/core.frontend.js')
 
-    //JAVASCRIPT CORE BACKEND
+    //JS CORE BACKEND
     .styles([
         'bower_components/AdminLTE/dist/js/app.min.js',
     ], '../js/core.backend.js')
 
-    //JAVASCRIPTS CONTROL BACKEND
+    //JS CONTROL BACKEND
     .styles([
         'resources/assets/js/be.news.js'
     ], '../js/backend.js')

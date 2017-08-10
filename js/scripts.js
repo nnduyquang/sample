@@ -2,7 +2,8 @@ var plugins = {
     menu: $('.sidebar'),
     slider1: $('#slider1'),
     module2: $('.module2-listing'),
-    module5: $('.module5')
+    module5: $('.member-carousel'),
+    footer1:$('.backToTop')
 };
 $(document).ready(function () {
     //Faceboook Init
@@ -362,6 +363,13 @@ $(document).ready(function () {
         });
     }
 
+    function footer1BackTopTop(){
+        plugins.footer1.click(function(){
+            $('html, body').animate({scrollTop:0}, 'slow');
+            return false;
+        });
+    }
+
     sidebar();
     if (plugins.slider1.length) {
         runSlider1();
@@ -371,5 +379,8 @@ $(document).ready(function () {
     }
     if (plugins.module5.length) {
         runModule5();
+    }
+    if(plugins.footer1.length){
+        footer1BackTopTop();
     }
 });

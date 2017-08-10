@@ -16,7 +16,7 @@
         </div>
     </div>
 </div>
-<div class="header">
+<div class="header hidden-sm hidden-xs">
     <div class="container">
         <a href="#" title="Anya Bridal" class="logo abs-center-logo"><strong>Anya
                 Bridal</strong>
