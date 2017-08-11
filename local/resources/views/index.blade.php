@@ -29,6 +29,8 @@
     abc<br>
 
     @include('module5')
-
+    @include('module6')
+    @include('module7')
+    @include('module8')
 @stop
 

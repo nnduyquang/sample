@@ -22,6 +22,9 @@
     "AdminLTE": "adminlte#^2.3.11",
     "nivo-slider": "*",
     "ckeditor": "#full/latest",
-    "slick-carousel": "^1.7.1"
+    "slick-carousel": "^1.7.1",
+    "wow": "^1.1.2",
+    "countUp.js": "^1.8.5",
+    "waypoints": "^4.0.1"
   }
 }
