@@ -33,7 +33,7 @@ mix.styles([
         'bower_components/slick-carousel/slick/slick.css',
         'bower_components/wow/css/libs/animate.css'
 
-    ], '../css/core.frontend.css')
+    ], '../css/core.frontend.css').options({processCssUrls: false})
 
     //CSS CORE BACKEND
     .styles([
