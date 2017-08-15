@@ -1566,6 +1566,81 @@ This class is added to the container
   }
 }
 
+/*
+*
+*
+*******Liên Hệ Báo Giá
+*
+*
+*/
+.container-contact .contain-swap {
+  padding-top: 55px;
+  background-image: url(../images/test/casebg.png);
+  background-size: cover !important;
+  padding-bottom: 111px !important;
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-top: -5px;
+}
+
+.container-contact .contain-swap .wp-contact .input-text, .container-contact .contain-swap .wp-contact .input-area {
+  background-color: white;
+  border-color: rgba(255, 255, 255, 0.01);
+  box-shadow: none;
+  margin-bottom: 0;
+  color: black;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  font-size: 18px;
+  position: relative;
+}
+
+.container-contact .contain-swap .wp-contact .input-text:hover, .container-contact .contain-swap .wp-contact .input-area:hover {
+  border: solid 1px #f1773d;
+}
+
+.container-contact .contain-swap .wp-contact .input-text {
+  height: 50px;
+  font-size: 18px;
+}
+
+.container-contact .contain-swap .wp-contact .btn-contact {
+  height: 50px;
+  border-color: transparent;
+  font-size: 18px;
+  color: white;
+  font-weight: 700;
+  border-radius: 3px;
+  -webkit-transition: all 300ms linear 0ms;
+  transition: all 300ms linear 0ms;
+  width: 100%;
+  background-color: #f1773d;
+}
+
+.container-contact .contain-swap .wp-contact .btn-contact:hover {
+  background-color: #cb5720;
+}
+
+.container-contact .contain-swap .wp-contact .loadingSending {
+  display: none;
+  font-size: 20px;
+}
+
+.container-contact .contain-swap .wp-contact .successSending {
+  display: none;
+  font-size: 20px;
+}
+
+.container-contact .contain-swap .wp-contact [rel="popover"] {
+  position: absolute;
+  cursor: pointer;
+  display: inline-block;
+  left: -5px;
+  top: 20%;
+}
+
 .footer1 {
   background-color: floralwhite;
   position: relative;

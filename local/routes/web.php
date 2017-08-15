@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('home');
 Route::get('/facebook', function () {
     return view('facebook.index');
 });
@@ -26,6 +26,7 @@ Route::get('/sml_login', function () {
 
 Route::post('sml_login', 'AuthController@login')->name('login');
 Route::get('sml_logout', 'AuthController@logout')->name('logout');
+Route::post('/sendmail',['as' => 'mail.send', 'uses' => 'MailController@send']);
 Route::group(['middleware' => ['auth']], function () {
     //DASHBOARD
     Route::get('sml_admin/dashboard', function () {

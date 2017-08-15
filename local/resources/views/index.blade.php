@@ -35,5 +35,6 @@
     @include('module9')
     @include('module10')
     @include('module11')
+    @include('module12')
 @stop
 

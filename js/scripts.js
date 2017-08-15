@@ -4,6 +4,7 @@ var plugins = {
     module2: $('.module2-listing'),
     module5: $('.member-carousel'),
     module7: $('#hieuSuat'),
+    module12:$('#btnSendMail'),
     footer1:$('.backToTop')
 };
 $(document).ready(function () {
@@ -397,6 +398,66 @@ $(document).ready(function () {
             offset: '85%'
         })
     }
+    function getBaseURL() {
+        var url = location.href;  // entire url including querystring - also: window.location.href;
+        var baseURL = url.substring(0, url.indexOf('/', 14));
+        if (baseURL.indexOf('http://localhost') != -1) {
+            // Base Url for localhost
+            var url = location.href;  // window.location.href;
+            var pathname = location.pathname;  // window.location.pathname;
+            var index1 = url.indexOf(pathname);
+            var index2 = url.indexOf("/", index1 + 1);
+            var baseLocalUrl = url.substr(0, index2);
+            return baseLocalUrl + "/";
+        }
+        else {
+            // Root Url for domain name
+            return baseURL + "/";
+        }
+
+    }
+    function runModule12(){
+        $('.loadingSending').css('display','inline-block');
+        var data = new FormData($(this).get(0));
+        data.append('name', $("input[name='name']").val());
+        data.append('email', $("input[name='email']").val());
+        data.append('phone', $("input[name='phone']").val());
+        data.append('website', $("input[name='website']").val());
+        data.append('keyword', $("textarea[name='keyword']").val());
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        $.ajax({
+            type: "POST",
+            url: getBaseURL() + "sendmail",
+            dataType: 'json',
+            processData: false,
+            contentType: false,
+            data: data,
+            success: function (data) {
+                if (data.success) {
+                    // alert( getBaseURL() + "sml_admin/dashboard");
+                    $('.loadingSending').css('display','none');
+                    $('.successSending').css('display','inline-block');
+                    $('.successSending').fadeIn(500);
+                    setTimeout("$('.successSending').fadeOut(1500);", 3000);
+                    $("input[name='name']").val("");
+                    $("input[name='email']").val("");
+                    $("input[name='phone']").val("");
+                    $("input[name='website']").val("");
+                    $("textarea[name='keyword']").val("");
+                }
+                else {
+                    alert('fail');
+                    // $('.log-status').addClass('wrong-entry');
+                    // $('.alert').fadeIn(500);
+                    // setTimeout("$('.alert').fadeOut(1500);", 3000);
+                }
+            }
+        });
+    }
 
     function footer1BackTopTop(){
         plugins.footer1.click(function(){
@@ -418,8 +479,15 @@ $(document).ready(function () {
     if (plugins.module7.length) {
         runModule7();
     }
+    if(plugins.module12.length){
+        $("[rel=popover]").tooltip();
+        plugins.module12.click(function(){
+            runModule12();
+        });
+    }
     if(plugins.footer1.length){
         footer1BackTopTop();
     }
+
     new WOW().init();
 });
