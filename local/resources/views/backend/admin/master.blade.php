@@ -252,7 +252,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </a>
                         <ul class="treeview-menu">
                             <li><a href="#">Cấu Hình Chung</a></li>
-                            <li><a href="{{ route('config.email') }}">Email</a></li>
+                            <li><a href="{{ route('config.email.index') }}">Email</a></li>
                         </ul>
                     </li>
                 </ul>

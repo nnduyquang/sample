@@ -31,7 +31,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Nội Dung:</strong>
-                {!! Form::textarea('content',null, array('placeholder' => 'Nội Dung','id'=>'content','class' => 'form-control','rows'=>'20','style'=>'resize:none')) !!}
+                {!! Form::textarea('content-news',null, array('placeholder' => 'Nội Dung','id'=>'content','class' => 'form-control','rows'=>'20','style'=>'resize:none')) !!}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">

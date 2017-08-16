@@ -1,5 +1,5 @@
-if ($('#content').length) {
-    CKEDITOR.replace('content', {
+if ($('#content-news').length) {
+    CKEDITOR.replace('content-news', {
         height: 800,
         language: 'vi',
         format_tags: 'p;h1;h2;h3;pre',

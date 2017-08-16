@@ -68,7 +68,8 @@ mix.styles([
 
     //JS CONTROL BACKEND
     .styles([
-        'resources/assets/js/be.news.js'
+        'resources/assets/js/be.news.js',
+        'resources/assets/js/be.config.email.js'
     ], '../js/backend.js')
 
     //LOGIN 1 JS

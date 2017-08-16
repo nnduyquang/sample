@@ -26,15 +26,15 @@ Route::get('/sml_login', function () {
 
 Route::post('sml_login', 'AuthController@login')->name('login');
 Route::get('sml_logout', 'AuthController@logout')->name('logout');
-Route::post('/sendmail',['as' => 'mail.send', 'uses' => 'MailController@send']);
+Route::post('/sendmail', ['as' => 'mail.send', 'uses' => 'MailController@send']);
 Route::group(['middleware' => ['auth']], function () {
     //DASHBOARD
     Route::get('sml_admin/dashboard', function () {
         return view('backend.admin.dashboard.index');
     })->name('dashboard');
-    Route::get('sml_admin/config/email', function () {
-        return view('backend.admin.config.mail');
-    })->name('config.email');
+//    Route::get('sml_admin/config/email', function () {
+//        return view('backend.admin.config.mail');
+//    })->name('config.email');
     //USER
     Route::resource('sml_admin/users', 'UserController');
 
@@ -56,5 +56,11 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('sml_admin/news/{id}/edit', ['as' => 'news.edit', 'uses' => 'NewsController@edit', 'middleware' => ['permission:news-edit']]);
     Route::patch('sml_admin/news/{id}', ['as' => 'news.update', 'uses' => 'NewsController@update', 'middleware' => ['permission:news-edit']]);
     Route::delete('sml_admin/news/{id}', ['as' => 'news.destroy', 'uses' => 'NewsController@destroy', 'middleware' => ['permission:news-delete']]);
+
+    //CONFIG
+    //--MAIL--//
+    Route::get('sml_admin/cau-hinh/mail', ['as' => 'config-email.index', 'uses' => 'CauHinhController@getAllCauHinh']);
+    Route::get('sml_admin/config/email', ['as' => 'config.email.index', 'uses' => 'ConfigController@getEmailConfig']);
+    Route::post('sml_admin/config/email', ['as' => 'config.email.store', 'uses' => 'ConfigController@saveEmailConfig']);
 });
 

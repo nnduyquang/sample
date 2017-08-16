@@ -28,6 +28,5 @@ class MailController extends Controller
                 'success' => true
             ]);
         }
-
     }
 }

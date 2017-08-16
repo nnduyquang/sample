@@ -41,7 +41,7 @@ class NewsController extends Controller
     {
         $news = new News();
         $title = $request->input('title');
-        $content = $request->input('content');
+        $content = $request->input('content-news');
         $image = $request->input('image');
         $image = substr($image, strpos($image, 'images'), strlen($image) - 1);
         $news->title = $title;
