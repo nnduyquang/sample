@@ -1641,6 +1641,25 @@ This class is added to the container
   top: 20%;
 }
 
+.container-contact .contain-swap .wp-contact .errorEmail, .container-contact .contain-swap .wp-contact .errorName, .container-contact .contain-swap .wp-contact .errorInfo {
+  display: none;
+  color: red;
+  -webkit-animation: blinker 1s linear 3;
+          animation: blinker 1s linear 3;
+}
+
+@-webkit-keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
 .footer1 {
   background-color: floralwhite;
   position: relative;

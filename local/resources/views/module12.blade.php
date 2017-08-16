@@ -21,7 +21,6 @@
                 </div>
                 <div class="col-lg-6 col-xs-12">
                     {{Form::text('phone','',array('class'=>'form-control input-text','placeholder'=>'Điện Thoại'))}}
-                    <i class="fa fa-exclamation-circle errorPhone" rel="popover" data-toggle="tooltip" data-placement="top" title="Tên Không Được Để Trống"></i>
                 </div>
                 <div class="col-lg-6 col-xs-12">
                     {{Form::text('website','',array('class'=>'form-control input-text','placeholder'=>'Website'))}}

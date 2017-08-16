@@ -418,6 +418,9 @@ $(document).ready(function () {
     }
     function runModule12(){
         $('.loadingSending').css('display','inline-block');
+        $('.errorEmail').css('display','none');
+        $('.errorName').css('display','none');
+        $('.errorInfo').css('display','none');
         var data = new FormData($(this).get(0));
         data.append('name', $("input[name='name']").val());
         data.append('email', $("input[name='email']").val());
@@ -451,6 +454,24 @@ $(document).ready(function () {
                 else {
                     alert('fail');
                 }
+            },
+            error: function(data){
+                $('.loadingSending').css('display','none');
+                var errors = $.parseJSON(data.responseText);
+                if(errors.hasOwnProperty('email')){
+                    $('.errorEmail').css('display','inline-block');
+                    $('.errorEmail').attr('data-original-title',errors['email']);
+                }
+                if(errors.hasOwnProperty('name')){
+                    $('.errorName').css('display','inline-block');
+                    $('.errorName').attr('data-original-title',errors['name']);
+                }
+                if(errors.hasOwnProperty('keyword')){
+                    $('.errorInfo').css('display','inline-block');
+                    $('.errorInfo').attr('data-original-title',errors['keyword']);
+                }
+                // console.log((errors.hasOwnProperty('email'))?errors['email']:'Không có lỗi email');
+                // Render the errors with js ...
             }
         });
     }

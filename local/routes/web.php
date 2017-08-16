@@ -32,6 +32,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('sml_admin/dashboard', function () {
         return view('backend.admin.dashboard.index');
     })->name('dashboard');
+    Route::get('sml_admin/config/email', function () {
+        return view('backend.admin.config.mail');
+    })->name('config.email');
     //USER
     Route::resource('sml_admin/users', 'UserController');
 
