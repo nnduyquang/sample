@@ -2,6 +2,7 @@
 
 namespace App\Mail;
 
+use App\Config;
 use Illuminate\Bus\Queueable;
 use Illuminate\Http\Request;
 use Illuminate\Mail\Mailable;
@@ -29,6 +30,9 @@ class SendingMailToCustomer extends Mailable
      */
     public function build(Request $request)
     {
-        return $this->view('mail.mail-to-customer')->to($request->email)->subject('Re:Công Ty TNHH Truyền Thông Và Đầu Tư Smartlinks')->from('nnduyquang@gmail.com','Smartlinks');;
+        $subjectSender = Config::where('name', 'email-sender-subject')->first();
+        $signatures = Config::where('name', 'email-signatures')->first()->content;
+        $content = Config::where('name', 'email-sender-content')->first()->content;
+        return $this->view('mail.mail-to-customer', ['signatures' => $signatures,'content'=>$content])->to($request->email)->subject($subjectSender->content)->from('nnduyquang@gmail.com', 'Smartlinks');;
     }
 }

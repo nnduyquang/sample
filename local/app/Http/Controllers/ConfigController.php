@@ -16,27 +16,43 @@ class ConfigController extends Controller
     public function saveEmailConfig(ConfigEmailRequest $request)
     {
         $emailReceive = $request->input('email-receive');
+        $hdEmailReceive = $request->input('hd-email-receive');
         $emailSenderSubject = $request->input('email-sender-subject');
+        $hdEmailSenderSubject = $request->input('hd-email-sender-subject');
         $emailReceiveSubject = $request->input('email-receive-subject');
+        $hdEmailReceiveSubject = $request->input('hd-email-receive-subject');
         $emailSignatures = $request->input('email-signatures');
+        $hdEmailSignatures = $request->input('hd-email-signatures');
         $emailSenderContent = $request->input('email-sender-content');
-        $config = Config::where('name', 'email-receive')->first();
-        $config->content = $emailReceive;
-        $config->save();
-        $config = Config::where('name', 'email-sender-subject')->first();
-        $config->content = $emailSenderSubject;
-        $config->save();
-        $config = Config::where('name', 'email-receive-subject')->first();
-        $config->content = $emailReceiveSubject;
-        $config->save();
-        if($emailSignatures) {
-            $config = Config::where('name', 'email-signatures')->first();
-            $config->content = $emailSignatures;
+        $hdEmailSenderContent = $request->input('hd-email-sender-content');
+
+        if (strcmp(trim($emailReceive), trim($hdEmailReceive)) != 0) {
+            $config = Config::where('name', 'email-receive')->first();
+            $config->content = $emailReceive;
             $config->save();
         }
-        $config = Config::where('name', 'email-sender-content')->first();
-        $config->content =  $emailSenderContent;
-        $config->save();
+        if (strcmp(trim($emailSenderSubject), trim($hdEmailSenderSubject)) != 0) {
+            $config = Config::where('name', 'email-sender-subject')->first();
+            $config->content = $emailSenderSubject;
+            $config->save();
+        }
+        if (strcmp(trim($emailReceiveSubject), trim($hdEmailReceiveSubject)) != 0) {
+            $config = Config::where('name', 'email-receive-subject')->first();
+            $config->content = $emailReceiveSubject;
+            $config->save();
+        }
+        if ($emailSignatures) {
+            if (strcmp(trim($emailSignatures), trim($hdEmailSignatures)) != 0) {
+                $config = Config::where('name', 'email-signatures')->first();
+                $config->content = $emailSignatures;
+                $config->save();
+            }
+        }
+        if (strcmp(trim($emailSenderContent), trim($hdEmailSenderContent)) != 0) {
+            $config = Config::where('name', 'email-sender-content')->first();
+            $config->content = $emailSenderContent;
+            $config->save();
+        }
         return redirect()->route('config.email.index')
             ->with('success', 'Cấu Hình Email Lưu Thành Công');
     }

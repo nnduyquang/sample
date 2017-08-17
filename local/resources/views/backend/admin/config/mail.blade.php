@@ -30,6 +30,7 @@
                     <div class="form-group">
                         <strong>EMail Nhận Báo Giá:</strong>
                         {!! Form::text('email-receive', $cauhinh->content, array('placeholder' => '','class' => 'form-control')) !!}
+                        {{ Form::hidden('hd-email-receive', $cauhinh->content) }}
                     </div>
                 </div>
             @endif
@@ -38,6 +39,7 @@
                     <div class="form-group">
                         <strong>Tiêu Để Email Khách Hàng Nhận Phản Hồi:</strong>
                         {!! Form::text('email-sender-subject', $cauhinh->content, array('placeholder' => '','class' => 'form-control')) !!}
+                        {{ Form::hidden('hd-email-sender-subject', $cauhinh->content) }}
                     </div>
                 </div>
             @endif
@@ -46,6 +48,7 @@
                     <div class="form-group">
                         <strong>Tiêu Để Email Công Ty Nhận Báo Giá:</strong>
                         {!! Form::text('email-receive-subject',  $cauhinh->content, array('placeholder' => '','class' => 'form-control')) !!}
+                        {{ Form::hidden('hd-email-receive-subject', $cauhinh->content) }}
                     </div>
                 </div>
             @endif
@@ -54,6 +57,7 @@
                     <div class="form-group">
                         <strong>Nội Dung Gửi Cho Khách Hàng:</strong>
                         {!! Form::textarea('email-sender-content',$cauhinh->content, array('placeholder' => 'Nội Dung','id'=>'email-sender-content','class' => 'form-control','rows'=>'10','style'=>'resize:none')) !!}
+                        {{ Form::hidden('hd-email-sender-content', $cauhinh->content) }}
                     </div>
                 </div>
             @endif
@@ -62,6 +66,7 @@
                     <div class="form-group">
                         <strong>Chữ Ký:</strong>
                         {!! Form::textarea('email-signatures', $cauhinh->content, array('placeholder' => 'Nội Dung','id'=>'email-signatures','class' => 'form-control','rows'=>'10','style'=>'resize:none')) !!}
+                        {{ Form::hidden('hd-email-signatures', $cauhinh->content) }}
                     </div>
                 </div>
             @endif

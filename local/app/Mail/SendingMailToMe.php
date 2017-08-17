@@ -3,6 +3,7 @@
 namespace App\Mail;
 
 
+use App\Config;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
@@ -30,6 +31,8 @@ class SendingMailToMe extends Mailable
      */
     public function build(Request $request)
     {
-        return $this->view('mail.mail-to-me',['name'=>$request->name,'email'=>$request->email,'phone'=>$request->phone,'website'=>$request->website,'keyword'=>$request->keyword])->to('trangnh.sml@gmail.com')->subject('Test Email API By Quang Nguyen')->from('nnduyquang@gmail.com','Smartlinks');;
+        $emailReceive = Config::where('name', 'email-receive')->first();
+        $subjectReceive = Config::where('name', 'email-receive-subject')->first();
+        return $this->view('mail.mail-to-me',['name'=>$request->name,'email'=>$request->email,'phone'=>$request->phone,'website'=>$request->website,'keyword'=>$request->keyword])->to($emailReceive->content)->subject($subjectReceive->content)->from('nnduyquang@gmail.com','Smartlinks');;
     }
 }
