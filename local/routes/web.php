@@ -17,6 +17,12 @@ Route::get('/', function () {
 Route::get('/facebook', function () {
     return view('facebook.index');
 });
+Route::get('/lien-he', function () {
+    return view('contact.contact1');
+});
+Route::get('/tin-tuc', function () {
+    return view('news.news1');
+});
 Route::get('/category', function () {
     return view('m-category');
 });

@@ -37,18 +37,36 @@
             @if($cauhinh->name=='email-sender-subject')
                 <div class="col-md-12">
                     <div class="form-group">
-                        <strong>Tiêu Để Email Khách Hàng Nhận Phản Hồi:</strong>
+                        <strong>Tiêu Đề Email Khách Hàng Nhận Phản Hồi:</strong>
                         {!! Form::text('email-sender-subject', $cauhinh->content, array('placeholder' => '','class' => 'form-control')) !!}
                         {{ Form::hidden('hd-email-sender-subject', $cauhinh->content) }}
+                    </div>
+                </div>
+            @endif
+            @if($cauhinh->name=='email-sender-from')
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <strong>From Email Khách Hàng Nhận Phản Hồi:</strong>
+                        {!! Form::text('email-sender-from', $cauhinh->content, array('placeholder' => '','class' => 'form-control')) !!}
+                        {{ Form::hidden('hd-email-sender-from', $cauhinh->content) }}
                     </div>
                 </div>
             @endif
             @if($cauhinh->name=='email-receive-subject')
                 <div class="col-md-12">
                     <div class="form-group">
-                        <strong>Tiêu Để Email Công Ty Nhận Báo Giá:</strong>
+                        <strong>Tiêu Đề Email Công Ty Nhận Báo Giá:</strong>
                         {!! Form::text('email-receive-subject',  $cauhinh->content, array('placeholder' => '','class' => 'form-control')) !!}
                         {{ Form::hidden('hd-email-receive-subject', $cauhinh->content) }}
+                    </div>
+                </div>
+            @endif
+            @if($cauhinh->name=='email-receive-from')
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <strong>From Email Công Ty Nhận Báo Giá:</strong>
+                        {!! Form::text('email-receive-from',  $cauhinh->content, array('placeholder' => '','class' => 'form-control')) !!}
+                        {{ Form::hidden('hd-email-receive-from', $cauhinh->content) }}
                     </div>
                 </div>
             @endif

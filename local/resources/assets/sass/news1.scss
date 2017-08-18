@@ -1,0 +1,30 @@
+.news1 {
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  h1 {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    line-height: normal;
+    font-size: 69px;
+    font-weight: 700;
+    color: white;
+  }
+}
+
+.news-content {
+  .wrap-one-news {
+    border: 1px solid #eee;
+    padding: 15px;
+    margin-bottom: 30px;
+    float: left;
+    width: 100%;
+    img {
+      width: 100%;
+      height: 200px;
+      padding-right: 15px;
+    }
+  }
+}

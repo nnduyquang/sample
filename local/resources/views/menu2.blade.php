@@ -2,7 +2,7 @@
     <div class="container">
         <div class="top-bar-left top-bar-custom">
             <ul class="links hidden-sm hidden-xs">
-                <li class="home-link"><a href="/">Trang Chủ</a></li>
+                <li class="home-link"><a href="{{URL::to('/')}}">Trang Chủ</a></li>
                 </li>
             </ul>
         </div>
@@ -54,10 +54,10 @@
                             <li><a href="/menswear/" class="">Menswear</a></li>
                         </ul>
                         <ul class="menu right-menu">
-                            <li class="menu-full-width"><a href="/location">Tin Tức</a>
+                            <li class="menu-full-width"><a href="{{URL::to('tin-tuc')}}">Tin Tức</a>
                             </li>
                             <li class=""><a href="/blog/">Báo Giá</a></li>
-                            <li class="menu-full-width"><a href="#">Liên Hệ</a>
+                            <li class="menu-full-width"><a href="{{URL::to('lien-he')}}">Liên Hệ</a>
                             </li>
                         </ul>
                     </div>

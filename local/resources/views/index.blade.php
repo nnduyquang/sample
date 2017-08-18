@@ -1,4 +1,7 @@
 @extends('master')
+@section('slider')
+    @include('slider1')
+@stop
 @section('styles')
     {{--THEMES FOR NIVO SLIDER--}}
     {{ Html::style('css/themes/default/default.css') }}

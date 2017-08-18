@@ -26,21 +26,33 @@ class ConfigTableSeeder extends Seeder
                 'user_id' => 1
             ],
             [
+                'name' => 'email-sender-from',
+                'description' => 'Cấu Hình From Gửi Khách Hàng',
+                'order'=>3,
+                'user_id' => 1
+            ],
+            [
                 'name' => 'email-receive-subject',
                 'description' => 'Cấu Hình Subject Nhận Báo Giá',
-                'order'=>3,
+                'order'=>4,
+                'user_id' => 1
+            ],
+            [
+                'name' => 'email-receive-from',
+                'description' => 'Cấu Hình From Nhận Báo Giá',
+                'order'=>5,
                 'user_id' => 1
             ],
             [
                 'name' => 'email-signatures',
                 'description' => 'Cấu Hình Chữ Ký',
-                'order'=>5,
+                'order'=>7,
                 'user_id' => 1
             ],
             [
                 'name' => 'email-sender-content',
                 'description' => 'Cấu Hình Nội Dung Gửi Khách Hàng',
-                'order'=>4,
+                'order'=>6,
                 'user_id' => 1
             ],
         ];

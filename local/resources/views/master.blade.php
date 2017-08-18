@@ -22,7 +22,7 @@
     @include('m-menu')
     {{--@include('menu1')--}}
     @include('menu2')
-    @include('slider1')
+    @yield('slider')
     <div id="wrap-container">
         @yield('container')
     </div>

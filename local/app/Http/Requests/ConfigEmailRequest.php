@@ -30,8 +30,10 @@ class ConfigEmailRequest extends FormRequest
                 return [
                     'email-receive' => 'required|email',
                     'email-sender-subject'=>'required',
+                    'email-sender-from'=>'required',
                     'email-receive-subject'=>'required',
-                    'email-sender-content'=>'required'
+                    'email-receive-from'=>'required',
+                    'email-sender-content'=>'required',
                 ];
             }
             case 'PUT':
@@ -44,8 +46,10 @@ class ConfigEmailRequest extends FormRequest
             'email-receive.required' => 'Mời Nhập Email Nhận Báo Giá',
             'email-receive.email' => 'Mời Nhập Đúng Định Dạng Email',
             'email-receive-subject.required' => 'Tiêu Đề Mail Nhận Không Để Trống',
+            'email-receive-from.required' => 'From Mail Nhận Không Để Trống',
             'email-sender-content.required' => 'Nội Dung Gửi Khách Hàng Không Để Trống',
             'email-sender-subject.required' => 'Tiêu Đề Mail Gửi Không Để Trống',
+            'email-sender-from.required' => 'From Mail Gửi Không Để Trống',
 
         ];
     }
