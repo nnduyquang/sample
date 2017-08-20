@@ -7,6 +7,7 @@
   "../css/core.frontend.css": "../css/core.frontend.css",
   "../css/core.backend.css": "../css/core.backend.css",
   "../js/scripts.js": "../js/scripts.js",
+  "../js/fe.pagespeedinsight.js": "../js/fe.pagespeedinsight.js",
   "../js/core.frontend.js": "../js/core.frontend.js",
   "../js/core.backend.js": "../js/core.backend.js",
   "../js/backend.js": "../js/backend.js",

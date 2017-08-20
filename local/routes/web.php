@@ -23,9 +23,16 @@ Route::get('/lien-he', function () {
 Route::get('/tin-tuc', function () {
     return view('news.news1');
 });
+Route::get('/phan-tich-website', function () {
+    return view('page-speed-insights.index');
+});
+Route::get('phan_tich','PageSpeedInsightController@resultAnalytics');
+
+
 Route::get('/category', function () {
     return view('m-category');
 });
+
 Route::get('/sml_login', function () {
     return view('backend.login.login1');
 });

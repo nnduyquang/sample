@@ -6,9 +6,11 @@
     "type": "project",
     "require": {
         "php": ">=5.6.4",
+        "guzzlehttp/guzzle": "^6.3",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "^5.3.0",
+        "symfony/psr-http-message-bridge": "^0.2.0",
         "zizaco/entrust": "dev-master#6a0fd8c3b73037b4855c6c4eaf1060788c0df1e9"
     },
     "require-dev": {

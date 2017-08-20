@@ -49,6 +49,8 @@ mix.styles([
 
     //JS CONTROL FRONTEND
     .styles('resources/assets/js/scripts.js', '../js/scripts.js')
+    //TEST
+    .styles('resources/assets/js/fe.pagespeedinsight.js', '../js/fe.pagespeedinsight.js')
 
     //JS CORE FRONTEND
     .styles([
