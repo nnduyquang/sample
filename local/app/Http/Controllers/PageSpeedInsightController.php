@@ -9,10 +9,10 @@ class PageSpeedInsightController extends Controller
 {
     public function resultAnalytics(){
         $client=new Client(['verify'=> false]);
-        $res = $client->request('GET', 'https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url=http://smartlinks.vn&strategy=mobile&key=AIzaSyBgs4pfBrI0cGQlAmCKqNd-bRcH4zBICHs');
+//        $res = $client->request('GET', 'https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url=http://smartlinks.vn&strategy=mobile&key=AIzaSyBgs4pfBrI0cGQlAmCKqNd-bRcH4zBICHs');
 //        https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url=http://smartlinks.vn&strategy=mobile&key=AIzaSyBgs4pfBrI0cGQlAmCKqNd-bRcH4zBICHs
 
-        echo $res->getBody();
+//        echo $res->getBody();
         $data='';
         //$data=$res->getBody();
 

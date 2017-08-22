@@ -28,7 +28,6 @@ $(document).ready(function () {
         success: function (data) {
             if (data.success) {
                 // alert(data.data);
-
                 setTimeout(
                     function() {
                         $('.test-class').css('color','red');

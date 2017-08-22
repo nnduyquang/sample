@@ -20,7 +20,12 @@
 @import "news1";
 @import "pagespeedinsight";
 @import "footer1";
-#searchInput{
+
+#searchInput {
   width: 100%;
   margin-bottom: 5px;
+}
+
+body {
+  line-height: 1.6;
 }
